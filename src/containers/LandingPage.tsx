@@ -1,9 +1,10 @@
-import React from 'react'
+import Hero from './Hero'
 
 
 export default function LandingPage() {
   return (
-    <div>
+    <div className='flex flex-col'>
+      <Hero />
     </div>
   )
 }
