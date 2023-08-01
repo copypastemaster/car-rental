@@ -1,0 +1,40 @@
+Primary colors:
+- Black
+- White
+- Royal blue
+
+Navigation bar:
+
+- Home :
+    to landing page
+
+- Services:
+    Airport transfers,
+    Special Occassion (birthdays, weddings)
+    For date (free flowers and chocolates)
+
+- Fleet :
+    Premium cars:
+    t must have:
+        - Passengers allowed
+        - Sanitation
+        - Full tank
+
+- FAQ :
+    Accordion
+    How to avail?
+    Who are eligible to rent?
+    How long can I rent the car?
+
+- Contact :
+    Login page
+    Sign Up page
+    Message
+
+
+Premium cars category:
+    - Mercedes Benz
+    - Audi
+    - Bmws
+    - Porsche
+
