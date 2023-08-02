@@ -34,6 +34,10 @@ Navigation bar:
 
 Premium cars category:
     - Mercedes Benz
+        1) Mercedes-Benz GLC
+        2) Mercedes-Benz EQE Suv
+        3) Mercedes-Benz EQE Sedan
+        4) Mercedes-Benz SL
     - Audi
     - Bmws
     - Porsche
