@@ -7,7 +7,7 @@ import { Audi } from '../objects/audi';
 import { Link } from 'react-router-dom';
 import { useStore } from '../store/zustStore';
 
-export default function CarMap (props) {
+export default function CarMap (props: any) {
 
     const { 
         setImg, 
@@ -21,7 +21,7 @@ export default function CarMap (props) {
         setFlatPayment,
         setHourlyPayment  } = useStore()
 
-    const setProperties = (obj) => {
+    const setProperties = (obj: any) => {
         setImg(obj.img);
         setModel(obj.model);
         setEngineType(obj.engineType);

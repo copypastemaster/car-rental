@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import LandingPage from './containers/LandingPage'
 import Nav from './components/Nav'
 import Fleet from './containers/Fleet'
-import RentConfirm from './components/RentConfirm'
+import RentConfirm from './containers/RentConfirm'
 
 function App() {
 
