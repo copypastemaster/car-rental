@@ -34,7 +34,7 @@ export const mercedes: Audi[] = [
     {
         img: s_class,
         model: '2023 Mercedes-Benz S-Class',
-        engineType: 'Plug-In Hybrid',
+        engineType: 'Electric',
         allowedNumberOfPassengers: 5,
         transmission: 'Automatic',
         sanitation: 'Sanitized',
@@ -52,7 +52,7 @@ export const mercedes: Audi[] = [
         transmission: 'Automatic',
         sanitation: 'Sanitized',
         fullTank: true,
-        description: "The Mercedes-Benz SL is a 4-seater vehicle that comes in 3 trim levels.",
+        description: "The design of the SLC works like an amplifier on our sense of sight and our synapses. Long nose, short overhangs – the silhouette is muscular and sensationally dynamic both when open and closed. Joie de vivre right down the line, starting with a distinctive front featuring a diamond radiator grille and chrome wing, and brilliantly finished by an expressive tail end.  ",
         distancePayment: 31000,
         hourlyPayment: 3100,
         flatPayment: 115000,

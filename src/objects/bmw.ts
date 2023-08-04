@@ -49,7 +49,7 @@ export const bmw : Audi[] = [
     {
         img: bmw_xm,
         model: '2023 BMW XM',
-        engineType: 'Plug-In Hybrid',
+        engineType: 'Electric',
         allowedNumberOfPassengers: 5,
         transmission: 'Automatic',
         sanitation: 'Sanitized',
