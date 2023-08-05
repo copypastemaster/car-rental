@@ -4,10 +4,10 @@ import { Audi } from "../objects/audi"
 interface Car extends Audi {
     setImg: (img: string) => void;
     setModel: (model: string) => void;
-    setEngineType: (engineType: 'Gas') => void;
-    setAllowedNumberOfPassengers: (allowedNumberOfPassengers: 0) => void;
-    setTransmission: (transmission: 'Automatic') => void;
-    setFullTank: (fullTank: true) => void;
+    setEngineType: (engineType: string ) => void;
+    setAllowedNumberOfPassengers: (allowedNumberOfPassengers: number) => void;
+    setTransmission: (transmission: string) => void;
+    setFullTank: (fullTank: boolean) => void;
     setDescription: (description: string) => void;
     setDistancePayment: (distancePayment: number) => void;
     setFlatPayment: (flatPayment: number) => void;
@@ -17,9 +17,9 @@ interface Car extends Audi {
 export const useStore = create<Car>() ((set) => ({
     img: '',
     model: '',
-    engineType: 'Gas',
+    engineType: '',
     allowedNumberOfPassengers: 0,
-    transmission: 'Automatic',
+    transmission: '',
     sanitation: '',
     fullTank: true,
     description: '',
@@ -29,10 +29,10 @@ export const useStore = create<Car>() ((set) => ({
 
     setImg: (img: string) => set({ img }),
     setModel: (model: string) => set({ model }),
-    setEngineType: (engineType: 'Gas') => set({ engineType }), 
-    setAllowedNumberOfPassengers: (allowedNumberOfPassengers: 0) => set({ allowedNumberOfPassengers }),
-    setTransmission: (transmission: 'Automatic') => set({ transmission }),
-    setFullTank: (fullTank: true) => set({ fullTank }),
+    setEngineType: (engineType: string) => set({ engineType }), 
+    setAllowedNumberOfPassengers: (allowedNumberOfPassengers: number) => set({ allowedNumberOfPassengers }),
+    setTransmission: (transmission: string) => set({ transmission }),
+    setFullTank: (fullTank: boolean) => set({ fullTank }),
     setDescription: (description: string) => set({ description }),
     setDistancePayment: (distancePayment: number) => set({ distancePayment }),
     setFlatPayment: (flatPayment: number) => set({ flatPayment }),

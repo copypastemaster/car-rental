@@ -6,9 +6,9 @@ import rs_etron_gt from '../assets/audi/rs-etron-gt.avif';
 export interface Audi  {
     img: string;
     model: string;
-    engineType: 'Gas' | 'Electric' | 'Diesel' | 'Plug-In Hybrid'
+    engineType: string;
     allowedNumberOfPassengers: number;
-    transmission: 'Manual' | 'Automatic';
+    transmission: string;
     sanitation: string;
     fullTank: boolean;
     description: string;

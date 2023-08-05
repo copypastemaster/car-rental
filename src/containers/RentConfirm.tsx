@@ -1,3 +1,5 @@
+import '../assets/rentConfirm.css'
+
 import { useStore } from '../store/zustStore'
 import {BsFillPersonDashFill} from 'react-icons/bs';
 import {BsFillGearFill} from 'react-icons/bs';
@@ -5,12 +7,24 @@ import {PiEngine} from 'react-icons/pi';
 import {BsFillFuelPumpDieselFill} from 'react-icons/bs';
 import {BsFillLightningChargeFill} from 'react-icons/bs';
 import TypeOfRent from '../components/TypeOfRent';
+import { useToast } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 import { ModeOfPayment } from '../components/TypeOfRent';
 import { usePaymentStore } from '../store/paymentStore';
 import { useState, useEffect } from 'react';
+import DeliverOptions from '../components/DeliverOptions';
+import { useDeliver } from '../store/deliverOptionsStore';
+import { redirect } from 'react-router-dom';
+import { Alert, AlertIcon, AlertTitle } from '@chakra-ui/react'
+import { useLoggedIn } from '../store/isLoggedIn';
+
+
 
 export default function RentConfirm() {
-
+    const { isLoggedIn } = useLoggedIn();
+    
+    
+    const toast = useToast();
     const [paymentValue, setPaymentValue] = useState(0);
 
     const {
@@ -26,6 +40,7 @@ export default function RentConfirm() {
     } = useStore()
 
     const { payment } = usePaymentStore();
+    const { isDeliver } = useDeliver() 
 
     useEffect(() => {
         switch(payment){
@@ -41,14 +56,27 @@ export default function RentConfirm() {
             default:
                 setPaymentValue(distancePayment);
         }
-    }, [payment])
 
-  return (
-    <div className='p-10 border flex flex-col gap-5 
-                    md:relative md:top-20 md:left-10
-                    lg:mx-52 xl:mx-64 lg:px-44'>
+    }, [payment, distancePayment, hourlyPayment, flatPayment])
+
+   return img == '' ? 
+          <div className='noimg relative top-10 md:top-32 lg:left-[40rem]'>
+            <h1>There's nothing here...</h1>
+            <Link to="/fleet" className='relative left-48 top-5 bg-slate-600 text-white p-2 rounded-md'>
+                <button>Rent a car</button>
+            </Link>
+          </div> :  (
+            <>
+                <Alert status='error' hidden={isLoggedIn} className='relative top-20'>
+                    <AlertIcon />
+                    <AlertTitle>You must login first to rent</AlertTitle>
+                </Alert>
+
+                <div className='p-10 border flex flex-col gap-5 
+                    md:relative md:top-20 md:mx-24
+                    lg:mx-52 xl:mx-64 xl:px-44'>
         <img src={img} className='xl:h-100 xl:w-100 xl:max-h-96 xl:max-w-[800px]'/>
-        <div className='flex flex-col justify-evenly sm:flex-row lg:relative 2xl:right-32'>
+        <div className='flex flex-col gap-2 justify-evenly sm:gap-0 sm:flex-row lg:relative'>
                             <section className='flex gap-2' title="Number of passengers allowed">
                                 <BsFillPersonDashFill size={15}/>
                                 <p className='text-xs'>{allowedNumberOfPassengers}</p>
@@ -70,7 +98,8 @@ export default function RentConfirm() {
             {model}
         </h1>
         <p className='max-w-md'>{description}</p>
-        <div className='flex flex-wrap gap-24 md:gap-64'>
+        <div className='flex flex-wrap gap-10 md:gap-24 lg:relative lg:top-5'>
+            
             <div>
                 <h3 className='text-lg font-semibold'>Type of rent</h3>
                 <TypeOfRent />
@@ -79,11 +108,34 @@ export default function RentConfirm() {
            <div>
                 <h3 className='text-lg font-semibold'>Mode of payment</h3>
                 <ModeOfPayment />
-           </div>            
+           </div>
+           
+           <div>
+                <h1 className='text-lg font-semibold'>Deliver options</h1>
+                <DeliverOptions />
+            </div>           
         </div>
-            <p className='flex gap-1'>To pay: P{paymentValue}.00</p>
-        <button className='relative top-3 bg-slate-600 text-white xl:relative xl:bottom-6 max-w-xs'>CONFIRM</button>
+
+            <div className='lg:relative lg:top-10'>
+                <p className='flex gap-1 text-xl'>Pay: P{isDeliver == true ? paymentValue + 10000 : paymentValue}.00</p>
+                <button className='[] p-2 relative top-3 bg-slate-600 text-white xl:relative xl:bottom-6 max-w-xs'
+                        disabled={!isLoggedIn}
+                        onClick={() => {
+                            toast({
+                                title: isDeliver == true ? 'Car will be delivered today!' : 'Your car is ready. Pick it up today!',
+                                duration: 2000,
+                                isClosable: true,
+                                position: 'top'
+                            })
+                            redirect('/fleet')
+                        }} >              
+                CONFIRM
+                </button>
+            </div>
+            
 
     </div>
+            </>
+
   )
 }

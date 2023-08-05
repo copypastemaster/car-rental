@@ -1,11 +1,12 @@
 import '../assets/nav.css'
-import { useState } from 'react'
 import { Avatar } from '@chakra-ui/react'
 import * as Dropdown from '@radix-ui/react-dropdown-menu'
 import { Link } from 'react-router-dom'
+import { useLoggedIn } from '../store/isLoggedIn'
 
 export default function Nav() {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const { isLoggedIn, setIsLoggedIn } = useLoggedIn();
+
     const clicked = () => {
         setIsLoggedIn(!isLoggedIn);
     }
@@ -16,15 +17,15 @@ export default function Nav() {
                     md:mt-7 md:mx-11 xl:mx-24'>
         <h1 className='text-4xl font-semibold'>primo.</h1>
         <section className='flex gap-12'>
-            <p> <Link to="/" className='hover:text-cyan-500'>Home</Link></p>
-            <p><Link to="/" className='hover:text-cyan-500'>Services</Link></p>
-            <p><Link to="/fleet" className='hover:text-cyan-500'>Fleet</Link></p>
-            <p><Link to="/" className='hover:text-cyan-500'>FAQ</Link></p>
-            <p><Link to="/" className='hover:text-cyan-500'>Contact</Link></p>
+            <p> <Link to="/" className='hover:text-slate-600'>Home</Link></p>
+            <p><Link to="/" className='hover:text-slate-600'>Services</Link></p>
+            <p><Link to="/fleet" className='hover:text-slate-600'>Fleet</Link></p>
+            <p><Link to="/" className='hover:text-slate-600'>FAQ</Link></p>
+            <p><Link to="/" className='hover:text-slate-600'>Contact</Link></p>
         </section>
         <Dropdown.Root>
             <Dropdown.Trigger asChild>
-                <button className='butn text-white bg-cyan-500'
+                <button className='butn text-white bg-slate-600'
                         aria-label="login"
                         hidden={isLoggedIn}>
                     Login
@@ -39,7 +40,7 @@ export default function Nav() {
 
         <Dropdown.Root>
             <Dropdown.Trigger asChild>
-                <Avatar name="User" hidden={!isLoggedIn}/>
+                <Avatar name="User" hidden={!isLoggedIn} size='sm' />
             </Dropdown.Trigger>
             <Dropdown.Portal>
                 <Dropdown.Content className='DropdownMenuContent' sideOffset={5}>
@@ -63,13 +64,13 @@ export default function Nav() {
             </Dropdown.Trigger>
             <Dropdown.Portal>
                 <Dropdown.Content className='DropdownMenuContent' sideOffset={7}>
-                    <Dropdown.Item className='item bg-white text-left text-xl hover:text-cyan-500'>Home</Dropdown.Item>
-                    <Dropdown.Item className='item bg-white text-left text-xl hover:text-cyan-500'>Services</Dropdown.Item>
-                    <Dropdown.Item className='item bg-white text-left text-xl hover:text-cyan-500'>
+                    <Dropdown.Item className='item bg-white text-left text-xl hover:text-slate-600'>Home</Dropdown.Item>
+                    <Dropdown.Item className='item bg-white text-left text-xl hover:text-slate-600'>Services</Dropdown.Item>
+                    <Dropdown.Item className='item bg-white text-left text-xl hover:text-slate-600'>
                         <Link to="/fleet">Fleet</Link>
                     </Dropdown.Item>
-                    <Dropdown.Item className='item bg-white text-left text-xl hover:text-cyan-500'>FAQ</Dropdown.Item>
-                    <Dropdown.Item className='item bg-white text-left text-xl hover:text-cyan-500'>Contacts</Dropdown.Item>
+                    <Dropdown.Item className='item bg-white text-left text-xl hover:text-slate-600'>FAQ</Dropdown.Item>
+                    <Dropdown.Item className='item bg-white text-left text-xl hover:text-slate-600'>Contacts</Dropdown.Item>
                 </Dropdown.Content>
             </Dropdown.Portal>            
         </Dropdown.Root>

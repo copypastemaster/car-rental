@@ -12,6 +12,10 @@
     margin-right: auto;
 }
 
+.item {
+    padding: 5px;
+}
+
 .DropdownMenuContent {
     min-width: 160px;
     background-color: white;

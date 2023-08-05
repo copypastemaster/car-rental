@@ -4,11 +4,16 @@ import {PiEngine} from 'react-icons/pi';
 import {BsFillFuelPumpDieselFill} from 'react-icons/bs';
 import {BsFillLightningChargeFill} from 'react-icons/bs';
 import { Audi } from '../objects/audi';
-import { Link } from 'react-router-dom';
 import { useStore } from '../store/zustStore';
+import { useLoggedIn } from '../store/isLoggedIn';
+import { useNavigate } from 'react-router-dom';
+import { Alert, AlertIcon, AlertTitle } from '@chakra-ui/react'
 
-export default function CarMap (props: any) {
 
+export default function CarMap (props) {
+
+    const { isLoggedIn } = useLoggedIn();
+   
     const { 
         setImg, 
         setModel,
@@ -21,7 +26,7 @@ export default function CarMap (props: any) {
         setFlatPayment,
         setHourlyPayment  } = useStore()
 
-    const setProperties = (obj: any) => {
+    const setProperties = (obj) => {
         setImg(obj.img);
         setModel(obj.model);
         setEngineType(obj.engineType);
@@ -34,8 +39,14 @@ export default function CarMap (props: any) {
         setHourlyPayment(obj.hourlyPayment);
     }
 
+    const navigate = useNavigate();
+
     return (
         <>
+            <Alert status='error' hidden={isLoggedIn}>
+                <AlertIcon />
+                <AlertTitle>You must login first to rent</AlertTitle>
+            </Alert>
             {props.object.map((car: Audi) => {
                 return(
                     <div className='border p-5 flex flex-col gap-4'>                 
@@ -63,14 +74,14 @@ export default function CarMap (props: any) {
                         <p className='font-semibold'>Distance (/5km) - P{car.distancePayment}.00</p>
                         <p className='font-semibold'>Hourly - P{car.hourlyPayment}.00</p>
                         <p className='font-semibold'>Flat rate - {car.flatPayment}.00</p>
-                        <Link to="/rentconfirm">
-                            <button className='bg-slate-600 text-emerald-50 btn sm:max-w-xs    md:text-lg md:w-96'
-                                    onClick={() => setProperties(car)}
-                                   >RENT
+                            <button className='bg-slate-600 text-emerald-50 btn sm:max-w-xs md:text-lg md:w-96'
+                                    disabled={!isLoggedIn}
+                                    onClick={() => {                                                      
+                                                     setProperties(car) 
+                                                     navigate('/rentconfirm')
+                                                    }}
+                                                    >RENT
                             </button>
-                        </Link>
-
-                        
                     </div>
                 )
             })}
