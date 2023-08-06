@@ -63,7 +63,7 @@ export default function Nav() {
             </svg>                
             </Dropdown.Trigger>
             <Dropdown.Portal>
-                <Dropdown.Content className='DropdownMenuContent' sideOffset={7}>
+                <Dropdown.Content className='DropdownMenuContent' sideOffset={4}>
                     <Dropdown.Item className='item bg-white text-left text-xl hover:text-slate-600'>Home</Dropdown.Item>
                     <Dropdown.Item className='item bg-white text-left text-xl hover:text-slate-600'>Services</Dropdown.Item>
                     <Dropdown.Item className='item bg-white text-left text-xl hover:text-slate-600'>

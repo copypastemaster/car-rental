@@ -76,7 +76,7 @@ export default function RentConfirm() {
                     md:relative md:top-20 md:mx-24
                     lg:mx-52 xl:mx-64 xl:px-44'>
         <img src={img} className='xl:h-100 xl:w-100 xl:max-h-96 xl:max-w-[800px]'/>
-        <div className='flex flex-col gap-2 justify-evenly sm:gap-0 sm:flex-row lg:relative'>
+        <div className='flex flex-wrap gap-2 justify-evenly sm:gap-0 sm:flex-row lg:relative'>
                             <section className='flex gap-2' title="Number of passengers allowed">
                                 <BsFillPersonDashFill size={15}/>
                                 <p className='text-xs'>{allowedNumberOfPassengers}</p>
@@ -119,7 +119,7 @@ export default function RentConfirm() {
             <div className='lg:relative lg:top-10'>
                 <p className='flex gap-1 text-xl'>Pay: P{isDeliver == true ? paymentValue + 10000 : paymentValue}.00</p>
                 <button className='[] p-2 relative top-3 bg-slate-600 text-white xl:relative xl:bottom-6 max-w-xs'
-                        disabled={!isLoggedIn}
+                        disabled={isLoggedIn}
                         onClick={() => {
                             toast({
                                 title: isDeliver == true ? 'Car will be delivered today!' : 'Your car is ready. Pick it up today!',

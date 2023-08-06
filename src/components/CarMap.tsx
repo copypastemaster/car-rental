@@ -49,9 +49,9 @@ export default function CarMap (props) {
             </Alert>
             {props.object.map((car: Audi) => {
                 return(
-                    <div className='border p-5 flex flex-col gap-4'>                 
+                    <div className='border p-5 max-w-sm md:p-5 sm:max-w-xl sm:mx-24 md:mx-20 md:max-w-3xl lg:relative lg:left-16  xl:max-w-sm xl:relative xl:left-20 xl:mx-20 2xl:max-w-xl 2xl:mx-0 2xl:relative 2xl:left-64 2xl:gap-5 flex flex-col gap-4'>                 
                         <img src={car.img} className=''/>
-                        <div className='flex justify-center gap-20'>
+                        <div className='flex justify-evenly md:justify-center md:gap-20 xl:gap-10 3xl:gap-20'>
                             <section className='flex gap-2' title="Number of passengers allowed">
                                 <BsFillPersonDashFill size={15}/>
                                 <p className='text-xs'>{car.allowedNumberOfPassengers}</p>

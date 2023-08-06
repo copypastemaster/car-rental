@@ -1,3 +1,4 @@
-body {
+body::-webkit-scrollbar {
     overflow-x: hidden;
+    display: none;
 }

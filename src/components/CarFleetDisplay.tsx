@@ -4,7 +4,7 @@ import { mercedes } from "../objects/mercedes"
 import { bmw } from "../objects/bmw"
 import { porsche } from "../objects/porsche"
 import  CarMap from '../components/CarMap'
-
+import Nav from "./Nav"
 
 export default function CarFleetDisplay() {
 
@@ -12,31 +12,33 @@ export default function CarFleetDisplay() {
     
 
   return (
-    <>
-           <div className='relative top-5 w-100 left-5 bg-slate-100 border flex flex-col text-center justify-evenly
+    <>  
+        
+           
+           <div className='w-100 bg-slate-100 border flex flex-col text-center justify-evenly
                             md:top-20 md:max-w-4xl md:relative md:flex-row md:flex-wrap
                             lg:ml-16 
                             xl:ml-52 
                             2xl:ml-96 2xl:left-66'>
-                <div className='hover:bg-cyan-400 cursor-pointer'>
+                <div className='hover:font-bold cursor-pointer'>
                     <h1 className='text-lg md:text-2xl font-thin' 
                     onClick={() => {setDisplay(mercedes)}}>MERCEDES
                     </h1>
                 </div>            
                 
-                <div className='hover:bg-cyan-400 cursor-pointer'> 
+                <div className='cursor-pointer'> 
                     <h1 className=' text-lg md:text-2xl font-thin'
                     onClick={() => {setDisplay(audi)}}>AUDI
                     </h1>
                 </div>
                 
-                <div className='hover:bg-cyan-400 cursor-pointer'> 
+                <div className='cursor-pointer'> 
                     <h1 className='text-lg md:text-2xl font-thin' 
                     onClick={() => {setDisplay(bmw)}}>BMW
                     </h1>
                 </div>
                 
-                <div className='hover:bg-cyan-400 cursor-pointer'> 
+                <div className='cursor-pointer'> 
                     <h1 className='text-lg md:text-2xl font-thin'
                     onClick={() => {setDisplay(porsche)}}>PORSCHE
                     </h1>
@@ -44,7 +46,7 @@ export default function CarFleetDisplay() {
                 
             </div>
 
-        <div className='flex flex-wrap gap-5 mt-10 mx-7 md:mt-44 md:mx-20'> 
+        <div className='flex flex-wrap gap-5 mt-10 md:mt-44 md:gap-10 '> 
             <CarMap object={display}/>
         </div>
     </>

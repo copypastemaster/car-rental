@@ -68,7 +68,7 @@ export default function HeroDisplay() {
     <div className='main flex place-items-end bg-black bg-cover bg-center p-5 md:px-24 bg-img3 my-1 sm:my-0'>
             <div className='flex flex-col gap-4 md:gap-10'>
                 <section className='heading flex flex-col md:flex-row'>
-                    <h1 className='text-white text-sm max-w-lg font-bold sm:text-5xl'>PREMIUM CAR RENTAL</h1>
+                    <h1 className='text-white text-2xl max-w-lg font-bold sm:text-5xl'>PREMIUM CAR RENTAL</h1>
                     <p className='text-white text-xs md:text-sm md:max-w-xl pt-10 font-semibold 2xl:relative 2xl:top-32'>We want you  to have a stress-free rental experience so we can make it easy to rent a car -- by providing simple search tools, customer reviews and plenty of pick-up locations across the city.</p>
                 </section>
                 <section className='sub flex flex-wrap md:relative md:top-10'>
@@ -81,7 +81,7 @@ export default function HeroDisplay() {
                     <HeroOptions options="Drop off address" optionChild="Manila" secondOptionChild="Bulacan"/>
                     <HeroOptions options="Pick up date" optionChild={currentDate} secondOptionChild=""/>
                     <HeroOptions options="Pick up time" optionChild="12:30 PM" secondOptionChild="11:30 AM"/>
-                    <button className='bg-slate-600 p-2 md:p-5 hover:bg-slate-600 hover:cursor-pointer text-white' disabled={isEnabled} onClick={search}>Search</button>
+                    <button className='bg-slate-600 p-2 md:p-5 rounded-none hover:bg-slate-600 hover:cursor-pointer text-white' disabled={isEnabled} onClick={search}>Search</button>
                     
                 </section>
                 <Modal isOpen={isOpen} onClose={onClose}>
@@ -94,7 +94,7 @@ export default function HeroDisplay() {
                             <img src={unitImg}/>
                         </ModalBody>
                         <ModalFooter>
-                            <button className="bg-slate-600" onClick={() => {                                
+                            <button className="bg-slate-600 p-3 px-16 text-white" onClick={() => {                                
                                 navigate('/rentconfirm');
                             }}>View</button>
                         </ModalFooter>
