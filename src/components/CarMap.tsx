@@ -8,6 +8,7 @@ import { useStore } from '../store/zustStore';
 import { useLoggedIn } from '../store/isLoggedIn';
 import { useNavigate } from 'react-router-dom';
 import { Alert, AlertIcon, AlertTitle } from '@chakra-ui/react'
+import '../assets/carmap.css'
 
 
 export default function CarMap (props) {
@@ -43,15 +44,15 @@ export default function CarMap (props) {
 
     return (
         <>
-            <Alert status='error' hidden={isLoggedIn}>
+            <Alert status='error' hidden={isLoggedIn} className='alerter' w='100%'>
                 <AlertIcon />
-                <AlertTitle>You must login first to rent</AlertTitle>
+                <AlertTitle className=''>You must login first to rent</AlertTitle>
             </Alert>
             {props.object.map((car: Audi) => {
                 return(
-                    <div className='border p-5 max-w-sm md:p-5 sm:max-w-xl sm:mx-24 md:mx-20 md:max-w-3xl lg:relative lg:left-16  xl:max-w-sm xl:relative xl:left-20 xl:mx-20 2xl:max-w-xl 2xl:mx-0 2xl:relative 2xl:left-64 2xl:gap-5 flex flex-col gap-4'>                 
+                    <div key={car.img} className='border cars p-5 max-w-lg md:p-5 sm:max-w-xl sm:mx-24 md:mx-20 md:max-w-3xl lg:relative lg:left-16  xl:max-w-sm xl:relative xl:left-20 xl:mx-20 2xl:max-w-xl 2xl:mx-0 2xl:relative 2xl:left-64 2xl:gap-5 flex flex-col gap-4'>                 
                         <img src={car.img} className=''/>
-                        <div className='flex justify-evenly md:justify-center md:gap-20 xl:gap-10 3xl:gap-20'>
+                        <div className='flex gap-5 flex-wrap justify-evenly md:justify-center md:gap-20 xl:gap-10 3xl:gap-20'>
                             <section className='flex gap-2' title="Number of passengers allowed">
                                 <BsFillPersonDashFill size={15}/>
                                 <p className='text-xs'>{car.allowedNumberOfPassengers}</p>
@@ -66,7 +67,7 @@ export default function CarMap (props) {
                             </section>
                             <section className='flex gap-2'>
                                 {car.engineType === 'Gas' ? <BsFillFuelPumpDieselFill size={15}/> : <BsFillLightningChargeFill size={15}/>}
-                                {car.engineType === 'Gas' ? <p className='text-xs'>Full tank</p> : <p className='text-xs'>Fully charged</p>}
+                                {car.engineType === 'Gas' ? <p className='text-xs'>Full tank</p> : <p className='text-xs'>100%</p>}
                             </section>
                         </div>
                         <h1 className='text-3xl text-slate-600 font-semibold'>{car.model}</h1>

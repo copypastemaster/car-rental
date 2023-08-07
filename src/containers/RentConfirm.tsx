@@ -119,18 +119,16 @@ export default function RentConfirm() {
             <div className='lg:relative lg:top-10'>
                 <p className='flex gap-1 text-xl'>Pay: P{isDeliver == true ? paymentValue + 10000 : paymentValue}.00</p>
                 <button className='[] p-2 relative top-3 bg-slate-600 text-white xl:relative xl:bottom-6 max-w-xs'
-                        disabled={isLoggedIn}
-                        onClick={() => {
-                            toast({
-                                title: isDeliver == true ? 'Car will be delivered today!' : 'Your car is ready. Pick it up today!',
-                                duration: 2000,
-                                isClosable: true,
-                                position: 'top'
-                            })
-                            redirect('/fleet')
-                        }} >              
+                        disabled={!isLoggedIn}
+                        onClick={() => { toast({
+                            title: isDeliver == true ? 'Car will be delivered today!' : 'Your car is ready. Pick it up today!',
+                            duration: 2000,
+                            isClosable: true,
+                            position: 'top'
+                        }) }}>              
                 CONFIRM
                 </button>
+                
             </div>
             
 

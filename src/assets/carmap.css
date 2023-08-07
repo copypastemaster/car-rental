@@ -1,0 +1,18 @@
+@media only screen and (min-width: 440px) {
+    .alerter, .brands {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 255px) {
+    .brands, .alerter {
+        width: 250px;
+    }
+}
+
+
+/* @media only screen and (min-width: 462px) {
+    .brands {
+        width: 540px;
+    }
+} */

@@ -1,19 +1,14 @@
 import '../assets/nav.css'
-import { Avatar } from '@chakra-ui/react'
 import * as Dropdown from '@radix-ui/react-dropdown-menu'
 import { Link } from 'react-router-dom'
-import { useLoggedIn } from '../store/isLoggedIn'
+import Login from './Login'
 
 export default function Nav() {
-    const { isLoggedIn, setIsLoggedIn } = useLoggedIn();
-
-    const clicked = () => {
-        setIsLoggedIn(!isLoggedIn);
-    }
-
+    
+   
   return (
     <>
-    <div className='hidden nav fixed md:flex md:justify-between md:items-center border         rounded-full     bg-white p-1 pl-5 pr-3
+    <div className='hidden nav z-50 fixed md:flex md:justify-between md:items-center border        rounded-full     bg-white p-1 pl-5 pr-3
                     md:mt-7 md:mx-11 xl:mx-24'>
         <h1 className='text-4xl font-semibold'>primo.</h1>
         <section className='flex gap-12'>
@@ -23,36 +18,12 @@ export default function Nav() {
             <p><Link to="/" className='hover:text-slate-600'>FAQ</Link></p>
             <p><Link to="/" className='hover:text-slate-600'>Contact</Link></p>
         </section>
-        <Dropdown.Root>
-            <Dropdown.Trigger asChild>
-                <button className='butn text-white bg-slate-600'
-                        aria-label="login"
-                        hidden={isLoggedIn}>
-                    Login
-                </button> 
-            </Dropdown.Trigger>
-            <Dropdown.Portal>
-                <Dropdown.Content className='DropdownMenuContent' sideOffset={5}>
-                    <Dropdown.Item className='item' onClick={clicked}>Login as dummy acc</Dropdown.Item>
-                </Dropdown.Content>
-            </Dropdown.Portal>            
-        </Dropdown.Root>
-
-        <Dropdown.Root>
-            <Dropdown.Trigger asChild>
-                <Avatar name="User" hidden={!isLoggedIn} size='sm' />
-            </Dropdown.Trigger>
-            <Dropdown.Portal>
-                <Dropdown.Content className='DropdownMenuContent' sideOffset={5}>
-                    <Dropdown.Item className='item' onClick={clicked}>Logout</Dropdown.Item>
-                </Dropdown.Content>
-            </Dropdown.Portal>            
-        </Dropdown.Root>
+        <Login />
         
     </div>
 
-    <div className='px-5 flex justify-between md:hidden'>
-        <h1 className='text-black text-2xl sm:text-4xl'>primo.</h1>
+    <div className='mobilenav fixed z-50 bg-gray-200 md:px-5 flex justify-between max-w-3xl md:hidden'>
+        <h1 className='text-black text-3xl sm:text-4xl'>primo.</h1>
         <div className='relative top-2'>
         <Dropdown.Root>
             <Dropdown.Trigger asChild>
@@ -64,7 +35,12 @@ export default function Nav() {
             </Dropdown.Trigger>
             <Dropdown.Portal>
                 <Dropdown.Content className='DropdownMenuContent' sideOffset={4}>
-                    <Dropdown.Item className='item bg-white text-left text-xl hover:text-slate-600'>Home</Dropdown.Item>
+                    <Dropdown.Item className='item bg-white text-left text-xl flex flex-col hover:text-slate-600'>
+                        <Login />
+                        <Link to="/" className='mt-5'>
+                            Home
+                        </Link>
+                    </Dropdown.Item>
                     <Dropdown.Item className='item bg-white text-left text-xl hover:text-slate-600'>Services</Dropdown.Item>
                     <Dropdown.Item className='item bg-white text-left text-xl hover:text-slate-600'>
                         <Link to="/fleet">Fleet</Link>

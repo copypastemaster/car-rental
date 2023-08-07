@@ -4,7 +4,7 @@ import { mercedes } from "../objects/mercedes"
 import { bmw } from "../objects/bmw"
 import { porsche } from "../objects/porsche"
 import  CarMap from '../components/CarMap'
-import Nav from "./Nav"
+import '../assets/carmap.css'
 
 export default function CarFleetDisplay() {
 
@@ -15,11 +15,11 @@ export default function CarFleetDisplay() {
     <>  
         
            
-           <div className='w-100 bg-slate-100 border flex flex-col text-center justify-evenly
+           <div className='brands w-100 relative top-11 max-w-3xl bg-slate-100 border flex flex-col flex-wrap text-center justify-evenly
                             md:top-20 md:max-w-4xl md:relative md:flex-row md:flex-wrap
-                            lg:ml-16 
-                            xl:ml-52 
-                            2xl:ml-96 2xl:left-66'>
+                            lg:mx-20                            
+                            xl:mx-52 
+                            2xl:mx-96 2xl:left-66'>
                 <div className='hover:font-bold cursor-pointer'>
                     <h1 className='text-lg md:text-2xl font-thin' 
                     onClick={() => {setDisplay(mercedes)}}>MERCEDES
@@ -46,7 +46,7 @@ export default function CarFleetDisplay() {
                 
             </div>
 
-        <div className='flex flex-wrap gap-5 mt-10 md:mt-44 md:gap-10 '> 
+        <div className='flex flex-wrap gap-5 mt-12 md:mt-44 md:gap-10 '> 
             <CarMap object={display}/>
         </div>
     </>
