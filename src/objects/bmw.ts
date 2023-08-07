@@ -4,8 +4,6 @@ import bmw_x5_M from '../assets/bmw/bmw-x5m.avif';
 import bmw_xm from '../assets/bmw/bmw-xm.avif';
 import { Audi } from './audi';
 
-interface Bmw extends Audi {}
-
 export const bmw : Audi[] = [
     {
         img: bmw7,

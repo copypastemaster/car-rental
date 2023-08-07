@@ -10,8 +10,12 @@ import { useNavigate } from 'react-router-dom';
 import { Alert, AlertIcon, AlertTitle } from '@chakra-ui/react'
 import '../assets/carmap.css'
 
+interface Props {
+    object: Audi[]
+}
 
-export default function CarMap (props) {
+
+export default function CarMap (props: Props) {
 
     const { isLoggedIn } = useLoggedIn();
    

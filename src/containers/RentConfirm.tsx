@@ -66,12 +66,12 @@ export default function RentConfirm() {
             </Link>
           </div> :  (
             <>
-                <Alert status='error' hidden={isLoggedIn} className='relative top-20'>
+                <Alert status='error' hidden={isLoggedIn} className='relative top-10 md:top-20'>
                     <AlertIcon />
                     <AlertTitle>You must login first to rent</AlertTitle>
                 </Alert>
 
-                <div className='p-10 border flex flex-col gap-5 
+                <div className='p-10 border flex flex-col gap-5 relative top-20
                     md:relative md:top-20 md:mx-24
                     lg:mx-52 xl:mx-64 xl:px-44'>
         <img src={img} className='xl:h-100 xl:w-100 xl:max-h-96 xl:max-w-[800px]'/>

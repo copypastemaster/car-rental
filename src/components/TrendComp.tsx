@@ -25,17 +25,17 @@ export default function TrendComp(props: Props<string, number, Audi>) {
         setFlatPayment,
         setHourlyPayment  } = useStore()
 
-    const setProperties = (obj: Audi) => {
-            setImg(obj.img);
-            setModel(obj.model);
-            setEngineType(obj.engineType);
-            setAllowedNumberOfPassengers(obj.allowedNumberOfPassengers);
-            setTransmission(obj.transmission);
-            setFullTank(obj.fullTank);
-            setDescription(obj.description);
-            setDistancePayment(obj.distancePayment);
-            setFlatPayment(obj.flatPayment);
-            setHourlyPayment(obj.hourlyPayment);
+    const setProperties = (obj: Audi | undefined) => {
+            setImg(obj?.img as string);
+            setModel(obj?.model as string);
+            setEngineType(obj?.engineType as string);
+            setAllowedNumberOfPassengers(obj?.allowedNumberOfPassengers as number);
+            setTransmission(obj?.transmission as string);
+            setFullTank(obj?.fullTank as boolean);
+            setDescription(obj?.description as string);
+            setDistancePayment(obj?.distancePayment as number);
+            setFlatPayment(obj?.flatPayment as number);
+            setHourlyPayment(obj?.hourlyPayment as number);
 
             navigate('/rentconfirm')
         }

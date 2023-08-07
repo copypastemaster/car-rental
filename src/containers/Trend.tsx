@@ -1,7 +1,7 @@
 import TrendComp from "../components/TrendComp"
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import { useNavigate } from "react-router-dom"
-import { audi } from "../objects/audi"
+import { Audi, audi } from "../objects/audi"
 import { bmw } from "../objects/bmw"
 import { porsche } from "../objects/porsche"
 import { mercedes } from "../objects/mercedes"
@@ -13,7 +13,7 @@ import mercedesss from '../assets/mercedes/sl-final.avif'
 export default function Trend() {
   const navigate = useNavigate();
 
-  const porschee = porsche.find((e) => e.model == '2023 Porsche 911')
+  const porschee = porsche.find((e: Audi) => e.model == '2023 Porsche 911')
   const audii = audi.find((e) => e.model == '2023 Audi RS 7') 
   const bmww = bmw.find((e) => e.model == '2023 BMW XM')
   const mercedess = mercedes.find((e) => e.model == '2023 Mercedes-Benz SL')
