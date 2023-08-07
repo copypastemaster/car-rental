@@ -1,14 +1,14 @@
-import { useState } from "react"
 import { audi } from "../objects/audi"
 import { mercedes } from "../objects/mercedes"
 import { bmw } from "../objects/bmw"
 import { porsche } from "../objects/porsche"
 import  CarMap from '../components/CarMap'
 import '../assets/carmap.css'
+import { useDisplay } from "../store/display"
 
 export default function CarFleetDisplay() {
 
-    const [display, setDisplay] = useState(mercedes);
+    const { display, setDisplay } = useDisplay()
     
 
   return (
