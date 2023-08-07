@@ -14,7 +14,6 @@ import { usePaymentStore } from '../store/paymentStore';
 import { useState, useEffect } from 'react';
 import DeliverOptions from '../components/DeliverOptions';
 import { useDeliver } from '../store/deliverOptionsStore';
-import { redirect } from 'react-router-dom';
 import { Alert, AlertIcon, AlertTitle } from '@chakra-ui/react'
 import { useLoggedIn } from '../store/isLoggedIn';
 

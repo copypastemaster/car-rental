@@ -27,7 +27,7 @@ export default function CarMap (props) {
         setFlatPayment,
         setHourlyPayment  } = useStore()
 
-    const setProperties = (obj) => {
+    const setProperties = (obj: Audi) => {
         setImg(obj.img);
         setModel(obj.model);
         setEngineType(obj.engineType);
