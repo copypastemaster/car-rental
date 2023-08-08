@@ -10,7 +10,7 @@ export default {
       backgroundImage: {
         'img': 'url(./src/assets/hero-pic.avif)',
         'img2': 'url(./src/assets/test-hero-pic.avif)',
-        'img3': 'url(./src/assets/zxc.avif)',
+        'img3': 'url(/Users/enoch/OneDrive/Desktop/projects/car-rental/public/carcategory/zxc.avif)',
         'audi': 'url(/Users/enoch/OneDrive/Desktop/projects/car-rental/public/carcategory/audi.avif)',
         'bmw': 'url(/Users/enoch/OneDrive/Desktop/projects/car-rental/public/carcategory/bmw.avif)',
         'mercedes': 'url(/Users/enoch/OneDrive/Desktop/projects/car-rental/public/carcategory/mercedes.avif)',
