@@ -16,3 +16,9 @@ npm run dev
 - Chakra UI
 - Radix
 - shadcn
+
+## ongoing updates
+- to add footer
+- to add services
+- to add FAQ
+- to add fonts
