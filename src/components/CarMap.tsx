@@ -48,13 +48,14 @@ export default function CarMap (props: Props) {
 
     return (
         <>
-            <Alert status='error' hidden={isLoggedIn} className='alerter' w='100%'>
+            <Alert status='error' hidden={isLoggedIn} className='alerter xl:mx-5 2xl:mx-14' w='100%'>
                 <AlertIcon />
                 <AlertTitle className=''>You must login first to rent</AlertTitle>
             </Alert>
             {props.object.map((car: Audi) => {
                 return(
-                    <div key={car.img} className='border cars p-5 max-w-lg md:p-5 sm:max-w-xl sm:mx-24 md:mx-20 md:max-w-3xl lg:relative lg:left-16  xl:max-w-sm xl:relative xl:left-20 xl:mx-20 2xl:max-w-xl 2xl:mx-0 2xl:relative 2xl:left-64 2xl:gap-5 flex flex-col gap-4'>                 
+                    <div key={car.img} className='border flex flex-col gap-5 p-3 
+                                                  xl:max-w-lg xl:mx-5 2xl:max-w-4xl 2xl:mx-[3rem]'>                 
                         <img src={car.img} className=''/>
                         <div className='flex gap-5 flex-wrap justify-evenly md:justify-center md:gap-20 xl:gap-10 3xl:gap-20'>
                             <section className='flex gap-2' title="Number of passengers allowed">

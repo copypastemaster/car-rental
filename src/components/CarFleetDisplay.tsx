@@ -15,38 +15,34 @@ export default function CarFleetDisplay() {
     <>  
         
            
-           <div className='brands w-100 relative top-11 max-w-3xl bg-slate-100 border flex flex-col flex-wrap text-center justify-evenly
-                            md:top-20 md:max-w-4xl md:relative md:flex-row md:flex-wrap
-                            lg:mx-20                            
-                            xl:mx-52 
-                            2xl:mx-96 2xl:left-66'>
-                <div className='hover:font-bold cursor-pointer'>
-                    <h1 className='text-lg md:text-2xl font-thin' 
+           <div className='brands relative top-24 flex flex-col md:flex-row justify-center gap-10'>
+                <div className=' cursor-pointer hover:outlined-dash p-2'>
+                    <h1 className='text-lg md:text-3xl font-thin hover:font-semibold focus:font-semibold' 
                     onClick={() => {setDisplay(mercedes)}}>MERCEDES
                     </h1>
                 </div>            
                 
-                <div className='cursor-pointer'> 
-                    <h1 className=' text-lg md:text-2xl font-thin'
+                <div className='hover:font-bold cursor-pointer hover:outline-transparent p-2'> 
+                    <h1 className=' text-lg md:text-3xl font-thin hover:font-semibold focus:font-semibold'
                     onClick={() => {setDisplay(audi)}}>AUDI
                     </h1>
                 </div>
                 
-                <div className='cursor-pointer'> 
-                    <h1 className='text-lg md:text-2xl font-thin' 
+                <div className='hover:font-bold cursor-pointer hover:outline-transparent p-2'> 
+                    <h1 className='text-lg md:text-3xl font-thin hover:font-semibold focus:font-semibold' 
                     onClick={() => {setDisplay(bmw)}}>BMW
                     </h1>
                 </div>
                 
-                <div className='cursor-pointer'> 
-                    <h1 className='text-lg md:text-2xl font-thin'
+                <div className='hover:font-bold cursor-pointer hover:outline-transparent p-2'> 
+                    <h1 className='text-lg md:text-3xl font-thin hover:font-semibold focus:font-semibold'
                     onClick={() => {setDisplay(porsche)}}>PORSCHE
                     </h1>
                 </div>
                 
             </div>
 
-        <div className='flex flex-wrap gap-5 mt-12 md:mt-44 md:gap-10 '> 
+        <div className='flex flex-wrap justify-center md:mx-10 lg:mx-14 xl:mx-20 2xl:mx-24 gap-5 mt-12 md:mt-44 md:gap-5'> 
             <CarMap object={display}/>
         </div>
     </>
