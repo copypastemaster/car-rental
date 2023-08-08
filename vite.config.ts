@@ -6,7 +6,11 @@ import * as path from 'path'
 export default defineConfig({
   resolve: {
     alias: {
-      '@static' : path.resolve(__dirname, './src/assets/carcategory')
+      '@heroimg' : path.resolve(__dirname, './src/assets/zxc.avif'),
+      '@audi' : path.resolve(__dirname, './src/assets/audi.avif'),
+      '@mercedes' : path.resolve(__dirname, './src/assets/mercedes.avif'),
+      '@bmw' : path.resolve(__dirname, './src/assets/bmw.avif'),
+      '@porsche' : path.resolve(__dirname, './src/assets/porsche.avif'),
     }
   },
   plugins: [react()],
