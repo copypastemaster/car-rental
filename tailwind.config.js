@@ -1,4 +1,10 @@
 /** @type {import('tailwindcss').Config} */
+import heroimg from './public/zxc.avif'
+import audiCat from './public/audi.avif'
+import bmwCat from './public/bmw.avif'
+import mercedesCat from './public/mercedes.avif'
+import porscheCat from './public/porsche.avif'
+
 export default {
   plugins: [require("daisyui")],
   content: [
@@ -10,11 +16,11 @@ export default {
       backgroundImage: {
         'img': 'url(./src/assets/hero-pic.avif)',
         'img2': 'url(./src/assets/test-hero-pic.avif)',
-        'img3': 'url(/Users/enoch/OneDrive/Desktop/projects/car-rental/public/zxc.avif)',
-        'audi': 'url(/Users/enoch/OneDrive/Desktop/projects/car-rental/public/audi.avif)',
-        'bmw': 'url(/Users/enoch/OneDrive/Desktop/projects/car-rental/public/bmw.avif)',
-        'mercedes': 'url(/Users/enoch/OneDrive/Desktop/projects/car-rental/public/mercedes.avif)',
-        'porsche': 'url(/Users/enoch/OneDrive/Desktop/projects/car-rental/public/porsche.avif)',
+        'img3': heroimg,
+        'audi': audiCat,
+        'bmw': bmwCat,
+        'mercedes': mercedesCat,
+        'porsche': porscheCat,
         'trendPorsche': 'url(./src/assets/porsche/porsche-911.avif)',
         'trendAudi': 'url(./src/assets/audi/rs-7.avif)',
         'trendBmw': 'url(./src/assets/bmw/bmw-xm.avif)',
