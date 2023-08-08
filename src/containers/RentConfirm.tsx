@@ -73,7 +73,7 @@ export default function RentConfirm() {
 
                 <div className='p-10 border flex flex-col gap-5 relative top-20
                     md:relative md:top-20 md:mx-24
-                    lg:mx-52 xl:mx-64 xl:px-44'>
+                    lg:mx-96 lg:px-32'>
         <img src={img} className='xl:h-100 xl:w-100 xl:max-h-96 xl:max-w-[800px]'/>
         <div className='flex flex-wrap gap-2 justify-evenly sm:gap-0 sm:flex-row lg:relative'>
                             <section className='flex gap-2' title="Number of passengers allowed">
