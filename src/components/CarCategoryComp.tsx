@@ -44,7 +44,7 @@ export default function CarCategoryComp(props: Props<string>) {
   }
 
   return (
-    <div className={`bg-${props.image} bg-cover bg-center h-96 md:h-64 md:w-[14rem] grid grid-cols-9 grid-rows-4 gap-4 px-4
+    <div className={`${props.image} bg-cover bg-center h-96 md:h-64 md:w-[14rem] grid grid-cols-9 grid-rows-4 gap-4 px-4
                     lg:w-96 lg:h-[30rem]`}>
         <h3 className='text-white font-bold text-2xl col-start-1 col-end-7 mt-5'>{props.brand}</h3>
         <button className='max-xs:col-start-7 col-start-8 row-start-4 max-xs:row-start-4 w-12 bg-slate-300 sm:col-start-9 sm:row-start-4 md:col-start-7 md:w-12 
