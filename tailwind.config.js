@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-import heroimg from './public/zxc.avif'
-import audiCat from './public/audi.avif'
-import bmwCat from './public/bmw.avif'
-import mercedesCat from './public/mercedes.avif'
-import porscheCat from './public/porsche.avif'
+import heroimg from './src/assets/carcategory/zxc.avif'
+import audiCat from './src/assets/carcategory/audi.avif'
+import bmwCat from './src/assets/carcategory/bmw.avif'
+import mercedesCat from './src/assets/carcategory/mercedes.avif'
+import porscheCat from './src/assets/carcategory/porsche.avif'
 
 export default {
   plugins: [require("daisyui")],
