@@ -42,7 +42,7 @@ export default function TrendComp(props: Props<string, number, Audi>) {
     
     return (
     <div className={`bg-white flex flex-col justify-between p-2 h-72 w-100 bg-cover bg-center mt-10 border xs:h-96 sm:h-[27rem] max-xs:min-w-fit
-                 border-slate-400 md:h-[20rem] max-xs:w-64 max-xs:h-96`}>
+                 border-slate-400 md:h-[20rem] max-xs:w-64 max-xs:h-96 hover:bg-slate-300`}>
         <h2>{props.model}</h2>
         <img src={props.bgImage} />
         <div className='flex justify-between'>
