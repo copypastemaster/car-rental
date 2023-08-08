@@ -1,4 +1,6 @@
-#Premium car rental
+# Premium car rental
+
+[Live demo](https://car-rental-three-sand.vercel.app/) :point_left:
 
 ## to run
 ```
@@ -13,3 +15,4 @@ npm run dev
 - Tailwind CSS
 - Chakra UI
 - Radix
+- shadcn
