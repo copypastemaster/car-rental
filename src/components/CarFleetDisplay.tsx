@@ -15,7 +15,7 @@ export default function CarFleetDisplay() {
     <>  
         
            
-           <div className='brands relative top-24 flex flex-col md:flex-row justify-center gap-10'>
+           <div className='brands relative top-10 text-center md:text-left md:top-24  flex flex-col md:flex-row justify-center md:gap-10'>
                 <div className=' cursor-pointer hover:outlined-dash p-2'>
                     <h1 className='text-lg md:text-3xl font-thin hover:font-semibold focus:font-semibold' 
                     onClick={() => {setDisplay(mercedes)}}>MERCEDES
