@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://copypastemaster.github.io/",
+  "homepage": "https://copypastemaster.github.io/car-rental/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
