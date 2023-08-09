@@ -48,7 +48,7 @@ export default function CarCategoryComp(props: Props<string>) {
                     lg:w-96 lg:h-[30rem]`}>
         <h3 className='text-white font-bold text-2xl col-start-1 col-end-7 mt-5'>{props.brand}</h3>
         <button className='max-xs:col-start-7 col-start-8 row-start-4 max-xs:row-start-4 w-12 bg-slate-300 sm:col-start-9 sm:row-start-4 md:col-start-7 md:w-12 
-        lg:w-10 lg:h-10 h-12 lg:col-start-8 lg:row-start-4 rounded-full'>
+        lg:w-10 lg:h-10 h-12 lg:col-start-8 lg:row-start-5 2xl:col-start-9 rounded-full'>
             <WiDirectionUpRight size={42} onClick={directDisplay}/>
         </button>
     </div>

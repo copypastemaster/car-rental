@@ -12,6 +12,7 @@ Navigation bar:
     Airport transfers,
     Special Occassion (birthdays, weddings)
     For date (free flowers and chocolates)
+    Business trips
 
 - Fleet :
     Premium cars:

@@ -21,7 +21,7 @@ export default function Trend() {
   
 
   return (
-    <div className='bg-slate-200 max-xs:min-w-fit pt-10'>
+    <div className='bg-slate-200 max-xs:min-w-fit pt-10 pb-20 mt-24'>
         <div className='flex flex-col mx-2 md:mx-8 2xl:mx-20'>
 
             <div className='flex flex-wrap justify-between'>
@@ -34,7 +34,7 @@ export default function Trend() {
                 </button>
             </div>
             
-            <div className="md:flex flex-row">
+            <div className="md:flex flex-row" id="trend">
                 <TrendComp model={porschee?.model} pricePerDistance={porschee?.distancePayment} bgImage={porscha} objek={porschee}/>
                 <TrendComp model={audii?.model} pricePerDistance={audii?.distancePayment}
                 bgImage={audiii} objek={audii}/>

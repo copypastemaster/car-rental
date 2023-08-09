@@ -17,7 +17,10 @@ export default {
         'trendPorsche': 'url(./src/assets/porsche/porsche-911.avif)',
         'trendAudi': 'url(./src/assets/audi/rs-7.avif)',
         'trendBmw': 'url(./src/assets/bmw/bmw-xm.avif)',
-        'trendMercedes': 'url(./src/assets/mercedes/sl-final.avif)'
+        'trendMercedes': 'url(./src/assets/mercedes/sl-final.avif)',
+        'airport' : 'url(@airport)',
+        'wedding' : 'url(@wedding)',
+        'date' : 'url(@date)',
       }
     },
   screens: {

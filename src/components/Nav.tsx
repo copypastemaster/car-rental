@@ -9,11 +9,11 @@ export default function Nav() {
   return (
     <>
     <div className='hidden nav z-50 fixed md:flex md:justify-between md:items-center border        rounded-full     bg-white p-1 pl-5 pr-3
-                    md:mt-7 md:mx-11 xl:mx-24'>
+                    md:mt-7 md:mx-11 xl:mx-20'>
         <h1 className='text-4xl font-semibold'>primo.</h1>
         <section className='flex gap-12'>
-            <p> <Link to="/" className='hover:text-slate-600'>Home</Link></p>
-            <p><Link to="/" className='hover:text-slate-600'>Services</Link></p>
+            <p> <Link to="/" className='hover:text-slate-600' onClick={() => document.getElementById('hero')?.scrollIntoView({behavior: 'smooth'})}>Home</Link></p>
+            <p><Link to="/" className='hover:text-slate-600' onClick={() => document.getElementById('services')?.scrollIntoView({behavior: 'smooth'})}>Services</Link></p>
             <p><Link to="/fleet" className='hover:text-slate-600'>Fleet</Link></p>
             <p><Link to="/" className='hover:text-slate-600'>FAQ</Link></p>
             <p><Link to="/" className='hover:text-slate-600'>Contact</Link></p>
