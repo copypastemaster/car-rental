@@ -18,7 +18,4 @@ npm run dev
 - shadcn
 
 ## ongoing updates
-- to add footer
-- to add services
-- to add FAQ
 - to add fonts

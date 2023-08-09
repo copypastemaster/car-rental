@@ -1,6 +1,7 @@
 import { AiFillGithub } from 'react-icons/ai'
 import { AiOutlineFacebook } from 'react-icons/ai'
 import { AiOutlineInstagram } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -44,10 +45,24 @@ function ThirdPart () {
   return (
     <div className='flex flex-col'>
       <h3 className='text-xl font-semibold mt-14 md:mt-2'>Explore</h3>
-      <p className='mt-3'>Airport transfers</p>
-      <p>Wedding events</p>
-      <p>Business meetings</p>
-      <p>Date nights</p>
+      <p className='mt-3'>
+        <Link to='/' onClick={() => document.getElementById('contacts')?.scrollIntoView({behavior: 'smooth'})} className='font-normal'>Airport transfers</Link>
+      </p>
+      <p>
+        <Link to="/" onClick={() => document.getElementById('contacts')?.scrollIntoView({behavior: 'smooth'})} className='font-normal'>
+          Wedding events
+        </Link>
+      </p>
+      <p>
+        <Link to="/" onClick={() => document.getElementById('contacts')?.scrollIntoView({behavior: 'smooth'})} className='font-normal'>
+          Business meetings
+        </Link>
+      </p>
+      <p>
+        <Link to="/" onClick={() => document.getElementById('contacts')?.scrollIntoView({behavior: 'smooth'})} className='font-normal'>
+          Date nights
+        </Link>
+      </p>
     </div>
   )
 }
