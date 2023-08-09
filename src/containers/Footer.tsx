@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 export default function Footer() {
   return (
     <div>
-      <div className='flex flex-col text-black text-center p-2 md:text-left md:flex-row md:justify-around sm:px-20 sm:pt-10 sm:pb-10 bg-slate-300'>
+      <div className='flex flex-col text-black text-center p-2 md:pt-24 md:pb-24 md:text-left md:flex-row md:justify-around sm:px-20 sm:pt-10 sm:pb-10 bg-slate-300'>
         <FirstPart />
         <SecondPart />
         <ThirdPart />
@@ -30,7 +30,7 @@ function FirstPart () {
 
 function SecondPart () {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col gap-2'>
       <h3 className='text-xl font-semibold mt-14 md:mt-2'>Top cities</h3>
       <p className='mt-3'>Manila</p>
       <p>Quezon City</p>
@@ -43,7 +43,7 @@ function SecondPart () {
 
 function ThirdPart () {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col gap-2'>
       <h3 className='text-xl font-semibold mt-14 md:mt-2'>Explore</h3>
       <p className='mt-3'>
         <Link to='/' onClick={() => document.getElementById('contacts')?.scrollIntoView({behavior: 'smooth'})} className='font-normal'>Airport transfers</Link>
@@ -83,7 +83,7 @@ function FourthPart () {
 
 function Contacts () {
   return (
-    <div className='flex flex-col' id="contacts">
+    <div className='flex flex-col gap-2' id="contacts">
       <h3 className='text-xl font-semibold mt-14 md:mt-2'>Contacts</h3>
       <p className='mt-3'>+639685932129</p>
       <p>enoch.binas@gmail.com</p>
