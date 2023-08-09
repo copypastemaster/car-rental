@@ -129,6 +129,8 @@ export default function RentConfirm() {
                 </button>
                 
             </div>
+
+        
             
 
     </div>

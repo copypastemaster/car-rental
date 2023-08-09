@@ -14,12 +14,12 @@ export default function ServicesHeader() {
 
         <div className='flex max-xs:gap-10 gap-10 max-xs:place-items-center sm:gap-24 md:gap-5 pt-20 md:pb-20'>
             <img src={premium} className='h-24'/>
-            <h2 className='text-white  max-w-[140px] sm:max-w-[120px] 2xl:max-w-[200px] text-xl md:text-2xl'>Premium privileges for regular customers</h2>
+            <h2 className='text-white  max-w-[140px] sm:max-w-[120px] md:max-w-[200px] 2xl:max-w-[200px] text-xl md:text-2xl'>Premium privileges for regular customers</h2>
         </div>
 
         <div className='flex max-xs:gap-10 gap-10 max-xs:place-items-center sm:gap-24 md:gap-5 pt-20 md:pb-20'>
             <img src={timer} className='h-24'/>
-            <h2 className='max-w-[140px] sm:max-w-[120px] 2xl:max-w-[150px]  text-xl md:text-2xl text-white'>Cancel booking immediately</h2>
+            <h2 className='max-w-[140px] sm:max-w-[120px] md:max-w-[150px] 2xl:max-w-[150px]  text-xl md:text-2xl text-white'>Cancel booking immediately</h2>
         </div>
 
         <div className='flex max-xs:gap-10 gap-10 max-xs:place-items-center  sm:gap-24 md:gap-5 pt-20 pb-20'>

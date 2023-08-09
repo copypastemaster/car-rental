@@ -10,13 +10,12 @@ export default function Nav() {
     <>
     <div className='hidden nav z-50 fixed md:flex md:justify-between md:items-center border        rounded-full     bg-white p-1 pl-5 pr-3
                     md:mt-7 md:mx-11 xl:mx-20'>
-        <h1 className='text-4xl font-semibold'>primo.</h1>
+        <h1 className='text-4xl font-semibold'>primo</h1>
         <section className='flex gap-12'>
             <p> <Link to="/" className='hover:text-slate-600' onClick={() => document.getElementById('hero')?.scrollIntoView({behavior: 'smooth'})}>Home</Link></p>
             <p><Link to="/" className='hover:text-slate-600' onClick={() => document.getElementById('services')?.scrollIntoView({behavior: 'smooth'})}>Services</Link></p>
             <p><Link to="/fleet" className='hover:text-slate-600'>Fleet</Link></p>
-            <p><Link to="/" className='hover:text-slate-600'>FAQ</Link></p>
-            <p><Link to="/" className='hover:text-slate-600'>Contact</Link></p>
+            <p><Link to="/" className='hover:text-slate-600' onClick={() => document.getElementById('contacts')?.scrollIntoView({behavior: 'smooth'})}>Contact</Link></p>
         </section>
         <Login />
         
@@ -37,16 +36,15 @@ export default function Nav() {
                 <Dropdown.Content className='DropdownMenuContent' sideOffset={4}>
                     <Dropdown.Item className='item bg-white text-left text-xl flex flex-col hover:text-slate-600'>
                         <Login />
-                        <Link to="/" className='mt-5'>
+                        <Link to="/" className='mt-5' onClick={() => document.getElementById('hero')?.scrollIntoView({behavior: 'smooth'})}>
                             Home
                         </Link>
                     </Dropdown.Item>
-                    <Dropdown.Item className='item bg-white text-left text-xl hover:text-slate-600'>Services</Dropdown.Item>
+                    <Dropdown.Item className='item bg-white text-left text-xl hover:text-slate-600' onClick={() => document.getElementById('services')?.scrollIntoView({behavior: 'smooth'})}>Services</Dropdown.Item>
                     <Dropdown.Item className='item bg-white text-left text-xl hover:text-slate-600'>
                         <Link to="/fleet">Fleet</Link>
                     </Dropdown.Item>
-                    <Dropdown.Item className='item bg-white text-left text-xl hover:text-slate-600'>FAQ</Dropdown.Item>
-                    <Dropdown.Item className='item bg-white text-left text-xl hover:text-slate-600'>Contacts</Dropdown.Item>
+                    <Dropdown.Item className='item bg-white text-left text-xl hover:text-slate-600' onClick={() => document.getElementById('contacts')?.scrollIntoView({behavior: 'smooth'})}>Contacts</Dropdown.Item>
                 </Dropdown.Content>
             </Dropdown.Portal>            
         </Dropdown.Root>

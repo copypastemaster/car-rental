@@ -2,6 +2,7 @@ import Hero from './Hero'
 import CarCategory from './CarCategory'
 import Trend from './Trend'
 import Services from './Services'
+import Footer from './Footer'
 
 
 export default function LandingPage() {
@@ -11,6 +12,7 @@ export default function LandingPage() {
       <CarCategory />
       <Trend />
       <Services />
+      <Footer />
     </div>
   )
 }
