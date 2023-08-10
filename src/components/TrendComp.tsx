@@ -45,9 +45,9 @@ export default function TrendComp(props: Props<string, number, Audi>) {
                  border-slate-400 md:h-[20rem] max-xs:w-64 max-xs:h-96 hover:bg-slate-300`}>
         <h2>{props.model}</h2>
         <img src={props.bgImage} />
-        <div className='flex justify-between'>
+        <div className='flex justify-between md:flex-wrap'>
             <p className='text-black font-normal'>{`P${props.pricePerDistance}.00 /5 km`}</p>
-            <button className='bg-slate-600 text-white p-1 md:p-2' onClick={() => setProperties(props.objek)}>Rent now</button>
+            <button className='bg-slate-600 text-white p-1 md:p-2 md:text-xs lg:text-lg' onClick={() => setProperties(props.objek)}>Rent now</button>
         </div>
     </div>
   )

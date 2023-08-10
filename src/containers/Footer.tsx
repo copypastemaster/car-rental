@@ -2,6 +2,7 @@ import { AiFillGithub } from 'react-icons/ai'
 import { AiOutlineFacebook } from 'react-icons/ai'
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
+import emailjs from '@emailjs/browser'
 
 export default function Footer() {
   return (
@@ -19,12 +20,29 @@ export default function Footer() {
 }
 
 function FirstPart () {
+  const serviceID = 'service_594554s';
+  const template = 'template_vq6roxg';
+
+  const sendEmail = (e: HTMLFormElement) => {
+    e.preventDefault();
+
+    emailjs.sendForm(serviceID, template, e.target, 'Nagi0EAPk7BhO8vW-')
+      .then((result) => {
+        console.log(result.text, result.status)
+      }), (err: string) => {
+        console.log(`error - ${err}`)
+      }
+
+      e.target.reset();
+  }
+
   return (
-    <div className='flex flex-col'>
-      <h1 className='text-4xl font-semibold'>primo</h1>
+    <form className='flex flex-col' onSubmit={sendEmail}>
+      <h1 className='text-5xl font-semibold'>primo</h1>
       <p className='mt-10'>Subscribe to the newsletter</p>
-      <input type="text" className="p-2 mt-2 rounded-full" placeholder="Email..."/>
-    </div>
+      <input type="email" className="p-2 mt-2 rounded-md" placeholder="Email..." name='email'/>
+      <button className='md:max-w-[80px] mt-2 rounded-md bg-slate-400 p-2'>send</button>
+    </form>
   )
 }
 
@@ -70,11 +88,11 @@ function ThirdPart () {
 function FourthPart () {
   return (
     <div className='bg-slate-200 text-black place-items-center justify-center gap-20 flex pt-2 sm:px-20 sm:pt-5 p-2'>
-      <p className='text-2xl'>&copy; Enoch, 2023</p>
+      <p className='text-xl'>&copy; Enoch, 2023</p>
       <div className='place-items-center flex gap-10'>
-      <a href='https://github.com/copypastemaster'> <AiFillGithub size={30}/> </a>
-      <a href='https://www.facebook.com/Enoch.Binas/'> <AiOutlineFacebook size={30}/> </a>
-      <a href='https://www.instagram.com/_enoch.b/'> <AiOutlineInstagram size={30}/> </a>
+      <a href='https://github.com/copypastemaster'> <AiFillGithub size={23}/> </a>
+      <a href='https://www.facebook.com/Enoch.Binas/'> <AiOutlineFacebook size={23}/> </a>
+      <a href='https://www.instagram.com/_enoch.b/'> <AiOutlineInstagram size={23}/> </a>
       </div>
       
     </div>
