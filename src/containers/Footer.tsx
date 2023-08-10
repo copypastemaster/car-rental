@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import emailjs from '@emailjs/browser'
 
 export default function Footer() {
+
   return (
     <div>
       <div className='flex flex-col text-black text-center p-2 md:pt-24 md:pb-24 md:text-left md:flex-row md:justify-around sm:px-20 sm:pt-10 sm:pb-10 bg-slate-300'>
@@ -38,10 +39,11 @@ function FirstPart () {
   }
 
   return (
+    
     <form className='flex flex-col' onSubmit={sendEmail}>
       <h1 className='text-5xl font-semibold'>primo</h1>
       <p className='mt-10'>Subscribe to the newsletter</p>
-      <input type="email" className="p-2 mt-2 rounded-md" placeholder="Email..." name='email'/>
+      <input type="email" className="emailer p-2 mt-2 rounded-md" placeholder="Email..." name='email'/>
       <button className='md:max-w-[80px] mt-2 rounded-md bg-slate-400 p-2'>send</button>
     </form>
   )

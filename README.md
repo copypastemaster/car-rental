@@ -18,4 +18,4 @@ npm run dev
 - shadcn
 
 ## ongoing updates
-- to add fonts
+- to add more pages for services
