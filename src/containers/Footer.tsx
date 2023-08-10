@@ -23,7 +23,7 @@ function FirstPart () {
   const serviceID = 'service_594554s';
   const template = 'template_vq6roxg';
 
-  const sendEmail = (e: HTMLFormElement) => {
+  const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
     emailjs.sendForm(serviceID, template, e.target, 'Nagi0EAPk7BhO8vW-')
@@ -32,8 +32,9 @@ function FirstPart () {
       }), (err: string) => {
         console.log(`error - ${err}`)
       }
-
-      e.target.reset();
+      
+     e.target.reset();
+     return emailjs.sendForm
   }
 
   return (

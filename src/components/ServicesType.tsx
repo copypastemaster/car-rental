@@ -34,7 +34,7 @@ function ServiceItems (props: Props<string>) {
         <div className='flex p-2 flex-col md:gap-5 md:flex-row xl:bg-slate-100 md:p-5 md:rounded-md'>
             <img src={props.image} className='md:h-64 lg:rounded-md'/>
             <div className='my-5 flex flex-col gap-4'>
-                <h3 className='text-3xl'>{props.heading}</h3>
+                <h3 className='fonts text-3xl'>{props.heading}</h3>
                 <p className='md:max-w-lg'>{props.paragraph}</p>
             </div>
         </div>

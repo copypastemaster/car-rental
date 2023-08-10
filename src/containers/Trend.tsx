@@ -25,7 +25,7 @@ export default function Trend() {
         <div className='flex flex-col mx-2 md:mx-8 2xl:mx-20'>
 
             <div className='flex flex-wrap justify-between'>
-                <h1 className='xs:text-center sm:text-left text-3xl md:text-5xl'>Trending Vehicles</h1>
+                <h1 className='fonts xs:text-center sm:text-left text-3xl md:text-5xl'>Trending Vehicles</h1>
                 <button className='bg-slate-600 text-white md:w-32 md:h-8 flex w-28 gap-6 mt-3 md:gap-4 md:px-3 md:pt-1
                                   flex-wrap'
                         onClick={() => navigate('/fleet')}>

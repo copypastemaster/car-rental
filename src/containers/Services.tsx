@@ -5,7 +5,7 @@ export default function Services() {
   return (
     <div className='' id='services'>
         <ServicesHeader/>
-        <h1 className='mt-10 text-center'>We offer</h1>
+        <h1 className='fonts mt-10 text-center'>We offer</h1>
         <ServicesType />
     </div>
   )
