@@ -23,7 +23,7 @@ function FirstPart () {
   const serviceID = 'service_594554s';
   const template = 'template_vq6roxg';
 
-  const sendEmail = (e: React.FormEvent) => {
+  const sendEmail = (e: any) => {
     e.preventDefault();
 
     emailjs.sendForm(serviceID, template, e.target, 'Nagi0EAPk7BhO8vW-')
