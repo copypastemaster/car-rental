@@ -11,7 +11,7 @@ type Props<T> = {
 
 export default function ServicesType() {
   return (
-    <div className='flex flex-col lg:max-w-fit sm:gap-14 mt-20 md:mx-20'>
+    <div className='flex flex-col lg:max-w-fit sm:gap-14 mt-20 md:mx-20 2xl:mx-auto'>
 
         <div className='xl:flex lg:justify-between md:gap-22 xl:gap-22'>
             <ServiceItems image={airport} heading='Airport transfers' paragraph='With additional wait time and flight tracking in case of delays, our service is optimized to make every airport transfer a breeze.'/>

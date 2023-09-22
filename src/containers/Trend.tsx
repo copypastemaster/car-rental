@@ -34,7 +34,7 @@ export default function Trend() {
                 </button>
             </div>
             
-            <div className="md:flex flex-row" id="trend">
+            <div className="md:flex flex-row 2xl:justify-evenly" id="trend">
                 <TrendComp model={porschee?.model} pricePerDistance={porschee?.distancePayment} bgImage={porscha} objek={porschee}/>
                 <TrendComp model={audii?.model} pricePerDistance={audii?.distancePayment}
                 bgImage={audiii} objek={audii}/>
